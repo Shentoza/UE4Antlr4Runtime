@@ -1,5 +1,6 @@
 // Copyright Epic Games, Inc. All Rights Reserved.
 
+using System.IO;
 using UnrealBuildTool;
 
 public class Antlr4Runtime : ModuleRules
@@ -9,6 +10,7 @@ public class Antlr4Runtime : ModuleRules
 		PCHUsage = ModuleRules.PCHUsageMode.UseExplicitOrSharedPCHs;
 		bUseRTTI = true; 
 		bEnableExceptions = true;
+		
 		
 		PublicIncludePaths.AddRange(
 			new string[] {
