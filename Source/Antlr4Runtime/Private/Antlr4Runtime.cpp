@@ -7,7 +7,11 @@
 
 #define LOCTEXT_NAMESPACE "FAntlr4RuntimeModule"
 
-FAntlr4RuntimeModule::FAntlr4RuntimeModule() : Antlr4DllHandle(nullptr)
+FAntlr4RuntimeModule::FAntlr4RuntimeModule()
+#if ANTLR4_STATIC == 0
+	:
+	Antlr4DllHandle(nullptr)
+#endif
 {
 }
 
