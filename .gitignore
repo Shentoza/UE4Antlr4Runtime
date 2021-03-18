@@ -15,6 +15,7 @@
 *.so
 *.dylib
 *.dll
+!antlr4-runtime.dll
 
 # Fortran module files
 *.mod
@@ -24,6 +25,7 @@
 *.la
 *.a
 *.lib
+!antlr4-runtime.lib
 
 # Executables
 *.exe
