@@ -43,7 +43,7 @@ public class Antlr4Lib : ModuleRules
 			PublicIncludePaths.Add(IncPath);
 			PublicSystemIncludePaths.Add(IncPath);
 			
-			
+			//For potential dynamic linking
 			PublicDefinitions.Add("WITH_ANTLR4=1");
 			if (!LoadStatic)
 			{
@@ -61,6 +61,8 @@ public class Antlr4Lib : ModuleRules
 			}
 			else
 			{
+				//We already have the library build, so we disable __declspec(dllimport) macro in the header.
+				PublicDefinitions.Add("ANTLR4CPP_STATIC=1");
 				PublicDefinitions.Add("ANTLR4_STATIC=1");
 			}
 		}
